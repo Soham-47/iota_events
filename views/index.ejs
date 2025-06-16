@@ -6,18 +6,23 @@
     <title>IOTA</title>
     <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 </head>
 <body>
     <div class="app">
     <navbar>
-        <div class="part1">
-            <h2>IOTA</h2>
-            <h4>JADAVPUR UNIVERSITY</h4>
-        </div>
-        <div class="part2">
-            <li>HOME</li>
-            <li>EVENTS</li>
-            <li>ABOUT</li>
+        <div class="navbar-container">
+            <div class="part1">
+                <h2>IOTA</h2>
+            </div>
+            <div class="part2">
+                <li>HOME</li>
+                <li>EVENTS</li>
+                <li>ABOUT</li>
+            </div>
         </div>
     </navbar>
     <div class="content">
@@ -26,72 +31,82 @@
         </div>
         <div class="content-2">
             <span>OUR INTRODUCTORY SESSIONS</span>
-            <p>OUR INTRODUCTORY SESSIONS</p>
+            <p>WELCOME TO IOTA</p>
             <h5>ROUTE TO FUTURE</h5>
         </div>
     </div>
     <div class="recent-events">
         <h2>RECENT EVENTS</h2>
-        <div class="events1">
-            <div class="events1-1">
-        <img src="https://static.vecteezy.com/system/resources/previews/035/817/550/non_2x/ai-generated-red-and-white-stars-in-space-free-photo.jpg" alt="">
+        <div class="event-card" style="margin-bottom: 8rem;">
+            <div class="event-card-image">
+                <img src="/images/lord-of-rings.jpg" alt="Lord of Rings Event">
             </div>
-            <div class="events1-2">
-                <h3>LORD OF RINGS</h3>
-                <a href="lordOfRings" id="myLink">Know More..</a>
+            <div class="event-card-content">
+                <h3 class="event-title">LORD OF THE RINGS</h3>
+                <p class="event-description">An exclusive event for enthusiasts engage in a thrilling contest with remote controlled cars. Register Now.</p>
+                
+                <div class="event-meta">
+                    <span class="event-date">Coming Soon</span>
+                    <span class="event-location">Jadavpur University</span>
+                </div>
+                
+                <a href="lordOfRings" class="event-button">
+                    Learn More
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
-        <div class="events2">
-            <div class="events2-1">
-                <h3>REWIRED OR CONNEXION</h3>
-                <a href="rewiredOrConnexion" id="myLink">Know More..</a>
+        <div class="event-card">
+            <div class="event-card-image">
+                <img src="https://www.brightidea.com/wp-content/uploads/Who_Participates_in_a_Hackathon.png" alt="Hackathon Event">
             </div>
-            <div class="events2-2">
-                <img src="https://res.cloudinary.com/jerrick/image/upload/v1680742329/642e17b957fe38001dfde0e2.jpg" alt="">
+            <div class="event-card-content">
+                <h3 class="event-title">CONNEXION</h3>
+                <p class="event-description">Join us for an exhilarating 24-hour coding marathon where innovation meets technology. Build solutions for real-world challenges.</p>
+                
+                <div class="event-meta">
+                    <span class="event-date">Coming Soon</span>
+                    <span class="event-location">Jadavpur University</span>
+                </div>
+                
+                <a href="rewiredOrConnexion" class="event-button">
+                    Learn More
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </div>
     <div class="image-sliders">
-    <div class="track" >
-        <img src="https://s.yimg.com/ny/api/res/1.2/dckglYIR.w0Or.LvhA0xkA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02NTI-/https://media.zenfs.com/en/futurism_981/a22c8495ef360550ca0bbcabeb4a257a" alt="">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOelHPDSiKj6nKnz26NdLVRxnSaMWsJxDkZQ&s" alt="">
-        <img src="https://www.jenoptik.com/-/media/websiteimages/visuals/photonics/mars-rover/mars-cosmos-space.jpg?impolicy=resize&width=1920" alt="">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYPu8BRJMYcpxmFUf2eQInla2XdFzG6fEy6qdIOcGc77rkGInDcAA41n63kKGlMx8EoXo&usqp=CAU" alt="">
-        <img src="https://discovery.sndimg.com/content/dam/images/discovery/fullset/2022/10/Dark%20Matter%20GettyImages-899006948.jpg.rend.hgtvcom.1280.1280.suffix/1666986573040.jpeg" alt="">
+        <div class="track">
+            <img src="https://s.yimg.com/ny/api/res/1.2/dckglYIR.w0Or.LvhA0xkA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02NTI-/https://media.zenfs.com/en/futurism_981/a22c8495ef360550ca0bbcabeb4a257a" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOelHPDSiKj6nKnz26NdLVRxnSaMWsJxDkZQ&s" alt="">
+            <img src="https://www.jenoptik.com/-/media/websiteimages/visuals/photonics/mars-rover/mars-cosmos-space.jpg?impolicy=resize&width=1920" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYPu8BRJMYcpxmFUf2eQInla2XdFzG6fEy6qdIOcGc77rkGInDcAA41n63kKGlMx8EoXo&usqp=CAU" alt="">
+            <img src="https://discovery.sndimg.com/content/dam/images/discovery/fullset/2022/10/Dark%20Matter%20GettyImages-899006948.jpg.rend.hgtvcom.1280.1280.suffix/1666986573040.jpeg" alt="">
         </div>
-        <div class="track" >
-        <img src="https://s.yimg.com/ny/api/res/1.2/dckglYIR.w0Or.LvhA0xkA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02NTI-/https://media.zenfs.com/en/futurism_981/a22c8495ef360550ca0bbcabeb4a257a" alt="">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOelHPDSiKj6nKnz26NdLVRxnSaMWsJxDkZQ&s" alt="">
-        <img src="https://www.jenoptik.com/-/media/websiteimages/visuals/photonics/mars-rover/mars-cosmos-space.jpg?impolicy=resize&width=1920" alt="">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYPu8BRJMYcpxmFUf2eQInla2XdFzG6fEy6qdIOcGc77rkGInDcAA41n63kKGlMx8EoXo&usqp=CAU" alt="">
-        <img src="https://discovery.sndimg.com/content/dam/images/discovery/fullset/2022/10/Dark%20Matter%20GettyImages-899006948.jpg.rend.hgtvcom.1280.1280.suffix/1666986573040.jpeg" alt="">
+        <div class="track">
+            <img src="https://s.yimg.com/ny/api/res/1.2/dckglYIR.w0Or.LvhA0xkA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02NTI-/https://media.zenfs.com/en/futurism_981/a22c8495ef360550ca0bbcabeb4a257a" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOelHPDSiKj6nKnz26NdLVRxnSaMWsJxDkZQ&s" alt="">
+            <img src="https://www.jenoptik.com/-/media/websiteimages/visuals/photonics/mars-rover/mars-cosmos-space.jpg?impolicy=resize&width=1920" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYPu8BRJMYcpxmFUf2eQInla2XdFzG6fEy6qdIOcGc77rkGInDcAA41n63kKGlMx8EoXo&usqp=CAU" alt="">
+            <img src="https://discovery.sndimg.com/content/dam/images/discovery/fullset/2022/10/Dark%20Matter%20GettyImages-899006948.jpg.rend.hgtvcom.1280.1280.suffix/1666986573040.jpeg" alt="">
         </div>
-
     </div>
-    <footer>
-    <h3>"THE INTERNET OF THINGS WILL AUGMENT YOUR BRAIN."</h3>
-
-        <div class="footer1">
-            <li>Home</li>
-            <li>About us</li>
-            <li>Contacts</li>
-        </div>
-        <div class="footer2">
-            <div class="chat">
-           <i class="fa-regular fa-comment"></i>
-           <p>Let's chat</p>
-        </div>
-            <div class="email">
-                <i class="fa-regular fa-envelope"></i>
-                <p>iota25@gmail.com</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer removed -->
     </div>
     
+    <!-- Initialize GSAP and animations -->
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Register GSAP plugins
+            gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+            
+            // Initialize animations
+            const script = document.createElement('script');
+            script.src = './javascript/script.js';
+            document.body.appendChild(script);
+        });
+    </script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="./javascript/script.js"></script>
-
 </html>

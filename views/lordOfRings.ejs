@@ -3,21 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
+    <title>Lord of the Rings Event</title>
     <link rel="stylesheet" href="./stylesheets/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body class="text-white min-h-screen flex items-center justify-center p-5">
-    <iframe src="/" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; border: none; z-index: -1; opacity: 0.2;"></iframe>
-    <div class="max-w-3xl bg-[url('https://hips.hearstapps.com/hmg-prod/images/digitally-created-3-dimensional-starry-sky-with-royalty-free-image-1744992067.pjpeg?crop=1xw:1xh;center,top&resize=1200:*')] bg-cover bg-center h-full w-full p-10 rounded-lg shadow-lg">
-        <a href="/" class="text-blue-500 text-2xl" id="styling">Home</a>
-        <h1 class="font-bold mb-4 text-center text-blue-400" id="gradient-text">Lord Of Rings</h1>
-        <p class="text-lg leading-relaxed text-gray-300">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur qui minus vitae non molestias fuga nemo at id, deleniti dolorum, itaque fugiat expedita. Rem quasi maiores asperiores illum assumenda, minima atque tempora numquam rerum sed esse incidunt similique odit nihil aliquid adipisci dolor temporibus explicabo dolorum eligendi doloremque? Iste illo assumenda commodi repudiandae tempora mollitia modi, quasi minima perspiciatis harum praesentium dignissimos recusandae delectus deleniti ratione eaque quaerat esse. Voluptate fugit nostrum ab et, consequatur provident ullam. Quo esse distinctio quia voluptatibus? Accusantium minus dolorem in omnis dolore tempora dolores odio ipsam. Sint nisi in rerum nobis, praesentium iure dicta atque corrupti! Accusantium, beatae quae. Non ullam voluptatum, ratione expedita architecto veritatis distinctio omnis minima iure voluptatem tenetur temporibus voluptate reiciendis esse ea pariatur labore magnam, dolore corporis porro qui illo dignissimos, laborum doloribus! Iste exercitationem corporis veritatis placeat aliquam possimus maxime animi consequuntur, quibusdam fuga similique quisquam odio dolore. Molestiae doloribus adipisci consequatur vero distinctio ratione porro dolores? Corrupti, laboriosam. Laudantium iusto laboriosam autem cum quia facere consequuntur aperiam inventore velit eos? Nobis, exercitationem illo accusantium alias nam sequi rem at nemo eius porro blanditiis eligendi, nulla expedita. Reiciendis animi eligendi dignissimos voluptas? Iure necessitatibus maxime in ratione laudantium.
-        </p>
-        <br>
-        <br>
-        <a href="#">Click to Register</a>
+    <div class="fixed inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 opacity-90"></div>
+    <iframe src="/" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; border: none; z-index: -1; opacity: 0.1;"></iframe>
+    
+    <div class="max-w-4xl w-full bg-[url('https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')] bg-cover bg-center min-h-[80vh] p-8 md:p-12 rounded-2xl shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/50 backdrop-blur-sm"></div>
+        
+        <div class="relative z-10">
+            <a href="/" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 text-xl mb-8 group">
+                <svg class="w-6 h-6 transform group-hover:-translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                Back to Home
+            </a>
+            
+            <h1 class="font-bold mb-8 text-center text-5xl" id="gradient-text">Lord of the Rings</h1>
+            
+            <div class="space-y-8 text-gray-200">
+                <p class="text-lg leading-relaxed max-w-3xl mx-auto text-center text-gray-300">
+                    Participate in this mind-blowing contest and win cash prizes and many more rewards! Join us for an unforgettable experience filled with excitement and innovation.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10 max-w-5xl mx-auto">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-400">Event Highlights</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                2-Day Contest
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Remote Controlled Cars
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Electronics
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-400">Event Details</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                Date: Coming Soon
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                Location: Jadavpur University
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12 pt-6 border-t border-white/10">
+                    <a href="#" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-full text-lg font-semibold hover:from-blue-700 hover:to-blue-900 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        Register Now
+                        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Animate elements on page load
+    gsap.from(".max-w-4xl", {
+        duration: 1,
+        y: 50,
+        opacity: 0,
+        ease: "power3.out"
+    });
+    
+    gsap.from("#gradient-text", {
+        duration: 1.2,
+        y: 30,
+        opacity: 0,
+        ease: "power3.out",
+        delay: 0.3
+    });
+    
+    gsap.from(".text-lg", {
+        duration: 1,
+        y: 20,
+        opacity: 0,
+        ease: "power3.out",
+        delay: 0.6
+    });
+    
+    gsap.from(".grid > div", {
+        duration: 0.8,
+        y: 30,
+        opacity: 0,
+        stagger: 0.2,
+        ease: "power3.out",
+        delay: 0.9
+    });
+    
+    gsap.from("a[href='#']", {
+        duration: 1,
+        y: 20,
+        opacity: 0,
+        ease: "power3.out",
+        delay: 1.2
+    });
+</script>
 </html>
