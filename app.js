@@ -146,7 +146,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/lordofrings', (req, res) => {
-  res.status(200).render('lordofrings', {
+  res.status(200).render('lordOfRings', {
     title: 'Lord of the Rings'
   });
 });
