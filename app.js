@@ -19,7 +19,78 @@ const app = express();
 // 1) GLOBAL MIDDLEWARES
 
 // Set security HTTP headers
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      useDefaults: false,
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "'unsafe-eval'",
+          "https://cdnjs.cloudflare.com",
+          "https://cdn.tailwindcss.com",
+          "https://cdn.jsdelivr.net"
+        ],
+        scriptSrcElem: [
+          "'self'",
+          "'unsafe-inline'",
+          "'unsafe-eval'",
+          "https://cdnjs.cloudflare.com",
+          "https://cdn.tailwindcss.com",
+          "https://cdn.jsdelivr.net"
+        ],
+        imgSrc: [
+          "'self'",
+          "data:",
+          "blob:",
+          "https://images.pexels.com",
+          "https://images.unsplash.com",
+          "https://*.pexels.com",
+          "https://*.unsplash.com",
+          "https://*.pexels.com/*",
+          "https://images.pexels.com/*"
+        ],
+        styleSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "https://fonts.googleapis.com",
+          "https://cdn.tailwindcss.com",
+          "https://cdnjs.cloudflare.com"
+        ],
+        styleSrcElem: [
+          "'self'",
+          "'unsafe-inline'",
+          "https://fonts.googleapis.com",
+          "https://cdn.tailwindcss.com",
+          "https://cdnjs.cloudflare.com"
+        ],
+        fontSrc: [
+          "'self'",
+          "data:",
+          "https://fonts.gstatic.com",
+          "https://cdnjs.cloudflare.com"
+        ],
+        connectSrc: [
+          "'self'",
+          "https://*.pexels.com",
+          "https://*.unsplash.com"
+        ],
+        frameSrc: ["'self'"],
+        objectSrc: ["'none'"],
+        baseUri: ["'self'"],
+        formAction: ["'self'"],
+        frameAncestors: ["'self'"],
+        upgradeInsecureRequests: []
+      }
+    },
+    crossOriginEmbedderPolicy: false,
+    crossOriginOpenerPolicy: false,
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+    referrerPolicy: { policy: 'strict-origin-when-cross-origin' }
+  })
+);
 
 // Development logging
 if (process.env.NODE_ENV === 'development') {
