@@ -63,20 +63,25 @@ app.use((req, res, next) => {
 });
 
 // 2) ROUTES
+// Test route for static files
+app.get('/test-static', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'test.html'));
+});
+
 app.get('/', (req, res) => {
   res.status(200).render('index', {
     title: 'Home'
   });
 });
 
-app.get('/lordOfRings', (req, res) => {
-  res.status(200).render('lordOfRings', {
+app.get('/lordofrings', (req, res) => {
+  res.status(200).render('lordofrings', {
     title: 'Lord of the Rings'
   });
 });
 
-app.get('/rewiredOrConnexion', (req, res) => {
-  res.status(200).render('rewiredOrConnexion', {
+app.get('/connexion', (req, res) => {
+  res.status(200).render('connexion', {
     title: 'Rewired or Connexion'
   });
 });
